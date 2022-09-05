@@ -1,7 +1,7 @@
 # todo
 
 Simple TODO app example using the Duct framework.  
-Check [this article](https://efficacious-albatross-193.notion.site/Starting-with-Duct-841ad116372f487893cb4aed84eb3376) for more details
+Check [this article](https://ts1503.notion.site/Starting-with-Duct-841ad116372f487893cb4aed84eb3376) for more details
 
 ## Developing
 
