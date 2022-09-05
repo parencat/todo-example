@@ -1,0 +1,2 @@
+{:todo.core/server     [:duct/daemon]
+ :todo.core/connection [:duct/daemon]}

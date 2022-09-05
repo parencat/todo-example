@@ -1,0 +1,20 @@
+{:duct.profile/base
+ {:duct.core/project-ns todo
+
+  :todo.core/connection
+  {:database-uri  #duct/env ["DATABASE_URI" :or "jdbc:sqlite::memory:"]
+   :database-type #duct/env ["DATABASE_TYPE" :or "sqlite"]}
+
+  :todo.core/migrate
+  {:connection #ig/ref :todo.core/connection}
+
+  :todo.core/handler
+  {:connection #ig/ref :todo.core/connection}
+
+  :todo.core/server
+  {:http-port #duct/env ["HTTP_PORT" :or 3000]
+   :handler   #ig/ref :todo.core/handler}}
+
+ :duct.profile/dev   #duct/include "dev"
+ :duct.profile/local #duct/include "local"
+ :duct.profile/prod  {}}
